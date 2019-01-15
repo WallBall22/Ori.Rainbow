@@ -28,13 +28,6 @@ client.on("message", message => {
   message.delete();
   };
   });
-
-
-//bc online
-
-
-  var prefix = ".";
-
   client.on("message", message => {
   
               if (message.content.startsWith(prefix + "bc")) {
@@ -66,8 +59,8 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('$adminbc')){
-if(!message.author.id === '') return;
+if (message.content.startsWith('.adminbc')){
+if(!message.author.id === '484869429327560704') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
