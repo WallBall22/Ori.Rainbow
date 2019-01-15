@@ -1,21 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = ".";
- client.on('ready', function(){
-    var ms = 60000 ;
-    var setGame = ['.help','Mero Server 👍✌️','BroadCast Bot 📨','By Matrex The Owner'];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/1play`);
-    }, ms);
 client.on("message", message => {
     if (message.content.startsWith(".obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
